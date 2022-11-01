@@ -5,6 +5,10 @@ module.exports = {
     loader: 'akamai',
     path: ''
   },
+  exportPathMap: (defaultPathMap, { dev, dir, outDir, distDir, buildId }) => {
+    delete defaultPathMap['/feed']
+    return defaultPathMap
+  },
   eslint: {
     dirs: ['components', 'layouts', 'lib', 'pages']
   },
